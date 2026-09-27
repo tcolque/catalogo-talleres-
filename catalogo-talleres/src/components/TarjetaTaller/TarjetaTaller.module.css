@@ -55,3 +55,11 @@
     color: var(--peligro);
     font-weight: bold;
 }
+
+.lista {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import estilos from "./TarjetaTaller.module.css";
 
-export default function TarjetaTaller({ taller }) {
+export default function TarjetaTaller({ taller, vista }) {
     const { titulo, categoria, cupo, inscriptos, nuevo, descripcion } = taller;
     const [expandido, setExpandido] = useState(false);
 
@@ -15,13 +15,13 @@ export default function TarjetaTaller({ taller }) {
     claseEstado = estilos.pocos;
     }
 
-    const claseTarjeta = `${estilos.tarjeta} ${claseEstado} ${expandido ? estilos.expandida : ""}`;
+    const claseVista = vista === "lista" ? estilos.lista : "";
+    const claseTarjeta = `${estilos.tarjeta} ${claseEstado} ${expandido ? estilos.expandida : ""} ${claseVista}`;
 
     return (
     <article className={claseTarjeta}>
         <div className="d-flex justify-content-between align-items-start mb-2">
         <h2 className="h5 m-0">{titulo}</h2>
-        {/* Elemento condicional: Etiqueta Nuevo */}
         {nuevo && <span className={estilos.badge}>Nuevo</span>}
         </div>
 

@@ -1,0 +1,23 @@
+.boton {
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primario {
+    background-color: var(--primario);
+    color: #ffffff;
+}
+
+.secundario {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: var(--texto);
+}
+
+.activo {
+    outline: 2px solid var(--primario);
+    font-weight: bold;
+}
