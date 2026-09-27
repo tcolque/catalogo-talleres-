@@ -1,0 +1,27 @@
+:root {
+  --fondo: #f0f2f5;       
+  --superficie: #ffffff;   
+  --texto: #212529;        
+  --primario: #0d6efd;
+  --exito: #198754;
+  --alerta: #ffc107;
+  --peligro: #dc3545;
+}
+
+[data-tema="oscuro"] {
+  --fondo: #121212;  
+  --superficie: #1e1e1e;  
+  --texto: #e0e0e0;      
+  --primario: #3d8bfd;
+  --exito: #25cff2;
+  --alerta: #ffda6a;
+  --peligro: #ea868f;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
